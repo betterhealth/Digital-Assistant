@@ -98,23 +98,28 @@
     };
 
     var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbwf-u6tvcgxIEZsuYfLS-mebNCAVt3zgVHAWS8GWzjEjFCkfpCd/exec'
+    url = 'https://script.google.com/macros/s/AKfycby4UL20kuAEKeKOWvlpBaHQ27iyLFJtX9NKIfrCYT-XxDkpmGM/exec'
 
 
 
         $('#submit-form').on('click', function(e) {
           e.preventDefault();
-          alert("please work")
           var jqxhr = $.ajax({
             url: url,
             method: "GET",
             dataType: "json",
-            data: $form.serializeObject()
-          }).success(
-            window.location.href = "action.html"
-
-          );
-        })
+            data: $form.serializeObject(),
+            success: function() {
+                $('#test-form').html("<div id='message'></div>");
+                $('#message').html("<h2>Thank you for your interest!</h2>")
+                .append("<p>We will be in touch soon.</p>")
+                .hide()
+                .fadeIn(1500, function() {
+                $('#message');
+            });
+            }
+        });
+        });
 
 
 
