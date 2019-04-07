@@ -150,12 +150,12 @@
 		<div class="container">
 			<form id="test-form">
 			  
-			  <div>
+			  <div class="fullname">
 			    <label>Full Name</label>
 			    <input type="text" name="name" placeholder="Full Name"/>
 			  </div>
 
-              <div>
+              <div class="email">
                 <label>Email Address</label>
                 <input type="text" name="email" placeholder="Email Address"/>
               </div>
@@ -193,16 +193,37 @@
 
               <div>
                 <label>Which of the following tasks would you find a digital assistant useful for?</label>
-                    <input type="checkbox" name="healthrecords" value="X"> Searching through health records<br>
-                    <input type="checkbox" name="healthrecords" value="X"> Searching through test results<br>
-                    <input type="checkbox" name="insurance" value="X"> Answering health insurance questions<br>
-                    <input type="checkbox" name="discharge" value="X"> Recalling discharge instructions<br>
-                    <input type="checkbox" name="symptoms" value="X"> Tracking symptoms<br>
-                    <input type="checkbox" name="appointments" value="X"> Getting reminders for appointments<br>
-                    <input type="checkbox" name="medications" value="X"> Keeping track of medication schedules<br>
+                    <div>
+                        <input type="checkbox" name="healthrecords" value="X"> 
+                        <h7>Searching through health records</h7>
+                    </div>
+                    <div>
+                    <input type="checkbox" name="healthrecords" value="X"> 
+                        <h7>Searching through test results</h7>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="insurance" value="X"> 
+                        <h7>Answering health insurance questions</h7>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="discharge" value="X"> 
+                        <h7>Recalling discharge instructions</h7>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="symptoms" value="X"> 
+                        <h7>Tracking symptoms</h7>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="appointments" value="X"> 
+                        <h7>Getting reminders for appointments</h7>
+                    </div>
+                    <div class="lastcheckbox">
+                        <input type="checkbox" name="medications" value="X"> 
+                        <h7>Keeping track of medication schedules</h7>
+                    </div>
                 </div>
 
-              <div>
+              <div class="additionalcomments">
                 <label>Additional Comments</label>
                 <input type="text" name="comments" placeholder="Additional comments and/or questions"/>
               </div>
